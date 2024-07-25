@@ -1,0 +1,32 @@
+#healthValue{
+    background-color: #ff0000;
+    color: white;
+     border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+
+}#levelValue{
+    background-color: blue;
+    color: white;
+     border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+
+}#armorValue{
+    background-color: #8d8d8d;
+    color: white;
+     border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+
+}
+
+body{
+    background-color: black;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+}
