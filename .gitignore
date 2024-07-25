@@ -33,5 +33,4 @@ build/
 .vscode/
 
 applications.properties
-C:\Users\jimmy\IdeaProjects\rpg\pom.xml
-C:\Users\jimmy\IdeaProjects\rpg\src\main\resources\application.properties
+src/main/resources/application.properties
