@@ -28,6 +28,7 @@ html, body {
 #mini-map {
     background-color: #444;
     margin: 20px 0;
+      font-family: 'Ancient Modern Tales', sans-serif;
 }
 
 #map-grid {
@@ -37,6 +38,7 @@ html, body {
     width: 100%;
     height: 200px;
     gap: 1px;
+      font-family: 'Ancient Modern Tales', sans-serif;
 }
 
 .map-cell {
@@ -47,6 +49,7 @@ html, body {
     color: white;
     font-size: 14px;
     cursor: pointer;
+      font-family: 'Ancient Modern Tales', sans-serif;
 }
 
 #stats {
@@ -62,6 +65,7 @@ html, body {
     align-items: center;
     background-color: red;
     min-width: 200px;
+      font-family: 'Ancient Modern Tales', sans-serif;
 }
 
 .label {
@@ -79,6 +83,7 @@ html, body {
 
 #choices {
     margin-top: 10px;
+      font-family: 'Ancient Modern Tales', sans-serif;
 }
 
 #quests {
@@ -89,3 +94,22 @@ html, body {
     background-color: #343a40;
     color: white;
 }
+#choiceText{
+    background-color: black;
+    color: antiquewhite;
+  font-family: 'Ancient Modern Tales', sans-serif;
+     font-size: xx-large;
+
+}
+@font-face {
+  font-family: 'Ancient Modern Tales';
+  src: url('../fonts/AncientModernTales-a7Po.ttf') format('truetype');
+}
+.text-center{
+      font-family: 'Ancient Modern Tales', sans-serif;
+}
+.navbar-text{
+      font-family: 'Ancient Modern Tales', sans-serif;
+    font-size: xx-large;
+}
+
