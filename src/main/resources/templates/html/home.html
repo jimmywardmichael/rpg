@@ -2,18 +2,88 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <title>Rpg</title>
-   <link rel="stylesheet" type="text/css" href="/css/home.css">
-
+    <title>RPG</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div id="stats" class="flex-container">
-    <div id="healthValue"></div>
-    <div id="levelValue"></div>
-    <div id="armorValue"></div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/image/profile.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <span class="navbar-text">RPG</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#questMenu" aria-controls="questMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row h-100">
+        <div class="col-md-3 d-flex flex-column align-items-center p-3 bg-dark text-white" id="left-sidebar">
+            <!-- Mini-map and health -->
+            <h3 class="text-center">Mini-map</h3>
+            <div id="mini-map">
+                <canvas id="miniMapCanvas" width="200" height="200"></canvas>
+                <div id="map-grid">
+                    <div class="map-cell" data-name="Start">Start</div>
+                    <div class="map-cell" data-name="Forest"></div>
+                    <div class="map-cell" data-name="Cave"></div>
+                    <div class="map-cell" data-name="Castle"></div>
+                </div>
+            </div>
+            <h3 class="text-center">Stats</h3>
+            <div id="stats">
+                <div class="stat-box">
+                    <span class="label">Health</span>
+                    <div id="healthValue">100</div>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Level</span>
+                    <div id="levelValue">1</div>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Armor</span>
+                    <div id="armorValue">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 d-flex flex-column p-3" id="main-content">
+            <!-- Player and game content -->
+            <h3 class="text-center">Player</h3>
+            <div id="player">Player content here</div>
+            <h3 class="text-center">Game</h3>
+            <div id="game">Game content here</div>
+            <div id="dialog" class="flex-container">
+                <div id="rpgSpeech"></div>
+            </div>
+            <div id="playerChoices" class="text-center">
+                <img id="sceneImage" src="/image/startermap.jpg" alt="Scene" class="img-fluid">
+                <div id="choiceText">Your choices will appear here.</div>
+                <div id="choices" class="btn-group">
+                    <button class="btn btn-primary" onclick="makeChoice(1)">Choice 1</button>
+                    <button class="btn btn-primary" onclick="makeChoice(2)">Choice 2</button>
+                    <button class="btn btn-primary" onclick="makeChoice(3)">Choice 3</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="dialog" class="flex-container">
-    <div id="rpgSpeech"></div>
+
+<!-- Quest menu (hamburger) -->
+<div class="collapse" id="questMenu">
+    <div class="card card-body">
+        <h3>Quests</h3>
+        <div id="quests">Quest content here</div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="/js/home.js"></script>
 </body>
 </html>
