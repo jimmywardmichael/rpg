@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('miniMapCanvas');
     const ctx = canvas.getContext('2d');
 
-    // Define connections between cells (by index)
+
     const connections = [
         { from: 0, to: 1 },
         { from: 1, to: 2 },
         { from: 2, to: 3 }
     ];
 
-    // Draw lines connecting the cells
+
     function drawConnections() {
         connections.forEach(connection => {
             const fromCell = cells[connection.from].getBoundingClientRect();
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Reveal the cell and redraw connections
+
     cells.forEach(cell => {
         cell.addEventListener('click', function () {
             if (!cell.textContent) {
@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Initial drawing of connections
+
     drawConnections();
 });
 
-// Function to handle player choices
+
 function makeChoice(choice) {
     const sceneImage = document.getElementById('sceneImage');
     const choiceText = document.getElementById('choiceText');
